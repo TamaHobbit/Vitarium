@@ -45,6 +45,8 @@ int main ( int argc, const char* argv[] ){
  	const Mat * displayImage = &output;
 	
 	CellularAutomaton game("000001100000001000");
+	game.setRand( referenceImage.cols, referenceImage.rows, 0 );
+	Mat prevPlusNew;
 	
 	while(true)	{
 		capture >> newRawRGB; // get a new frame from camera
@@ -52,7 +54,11 @@ int main ( int argc, const char* argv[] ){
 		filter(newRawRGB, output);
 		cvtColor( output, output, CV_BGR2GRAY );
 		
-		imshow(window_title, *displayImage);
+		
+		bitwise_or(output, game.m_data, game.m_data);
+		game.timestep();
+		
+		imshow(window_title, game.m_data);
 
 		int keyPressed = waitKey(30);
 		//high_resolution_clock::time_point previousTime = high_resolution_clock::now();

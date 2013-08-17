@@ -28,7 +28,7 @@ void CellularAutomaton::setRand(int width, int height, int millentage){
 		m_data = Mat::ones(width, height, m_data.type())*255;
 	} else {
 		millentage /= 4;
-		//get a random grayscale randomly distributed in range (0, 100>
+		//get a random grayscale randomly distributed in range (0, 250>
 		randu(m_data, Scalar(0), Scalar(250));
 		//anything higher than the threshold is live, so the higher the live_percentage, the
 		//more pixels should pass this test, therefore the lower the threshold

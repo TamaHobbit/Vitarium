@@ -32,11 +32,13 @@ namespace Gardeners {
 		int erode_size, erode_passes;
 		int dilate_size, dilate_passes;
 		int diff_threshold_value;
+		
+		Mat frames[FRAMECOUNT];
 	private:
 		const char * const window_title;
 		VideoCapture videoStream;
 		
-		Mat frames[FRAMECOUNT];
+		
 		vector<Mat> reference_split;
 		
 		void diff_and_thresh_channels(Mat & frame, Mat & person_mask);

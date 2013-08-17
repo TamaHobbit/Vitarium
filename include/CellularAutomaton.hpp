@@ -34,8 +34,8 @@ public:
 	bool timestep_checkChange();
 	Mat getMatrix();
 	
-private:
 	Mat m_data;
+private:
 	bitset<18> m_rule;
 	
 	//0-8 stores the neighbourhood sum if the cell is dead, 9-17 if it is alive; 

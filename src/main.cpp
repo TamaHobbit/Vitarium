@@ -50,6 +50,7 @@ int main ( int argc, const char* argv[] ){
 		capture >> newRawRGB; // get a new frame from camera
 		
 		filter(newRawRGB, output);
+		cvtColor( output, output, CV_BGR2GRAY );
 		
 		imshow(window_title, *displayImage);
 

@@ -3,6 +3,21 @@
 CellularAutomaton::CellularAutomaton(bitset<18> rule) : m_rule(rule){
 }
 
+CellularAutomaton::CellularAutomaton(const char * rule){
+	unsigned long setbit = 1 << 17;
+	m_rule = 0;
+	for(int i = 0; i < 18; i++){
+		if(rule[i] == '\0'){
+			cout << "Bitstring too short. You must specify an 18 bit string." << endl;
+			exit(1);
+		}
+		if( rule[i] == '1' ){
+			m_rule |= setbit;
+		}
+		setbit = setbit >> 1;
+	}
+}
+
 void CellularAutomaton::setMat(Mat & seed){
 	m_data = seed;//not a real copy! Just point to seed
 }

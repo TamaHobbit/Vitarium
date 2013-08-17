@@ -26,6 +26,7 @@ using namespace cv;
 class CellularAutomaton {
 public:
 	CellularAutomaton(bitset<18> rule);
+	CellularAutomaton(const char * rule);
 	void setMat(Mat & seed);
 	void setRand(int width, int height, int millentage);
 
@@ -35,7 +36,7 @@ public:
 	
 private:
 	Mat m_data;
-	const bitset<18> m_rule;
+	bitset<18> m_rule;
 	
 	//0-8 stores the neighbourhood sum if the cell is dead, 9-17 if it is alive; 
 	//e.g. a sum of 12 means the centre is alive and 3 neighbours

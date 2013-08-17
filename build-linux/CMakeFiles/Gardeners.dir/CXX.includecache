@@ -40,6 +40,10 @@ opencv2/opencv.hpp
 
 ../include/values.hpp
 
+/media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
+BackGroundSubtract.hpp
+/media/code/Cpp/Gardeners2/src/BackGroundSubtract.hpp
+
 /media/code/Cpp/Gardeners2/src/main.cpp
 opencv2/opencv.hpp
 -

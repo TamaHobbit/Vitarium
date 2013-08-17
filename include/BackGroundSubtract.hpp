@@ -17,7 +17,7 @@ namespace Gardeners {
 		void updateReference();
 		
 		void smoothGradients(Mat newRawRGB, Mat lastProcessedRGB, Mat newProcessedRGB);
-		void operator()(/*Mat & input, */Mat & output);
+		void operator()(Mat & input, Mat & output);
 		
 		template<class Func>
 		void channelWise(Mat & frame, Mat & output, Func f){

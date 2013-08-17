@@ -54,10 +54,12 @@ int main ( int argc, const char* argv[] ){
 	Mat output(referenceImage.size(), referenceImage.type());
  	const Mat * displayImage = &output;
 	
+	CellularAutomaton game("000001100000001000");
+	
 	while(true)	{
-		//capture >> newRawRGB; // get a new frame from camera
+		capture >> newRawRGB; // get a new frame from camera
 		
-		filter(output);
+		filter(newRawRGB, output);
 		//Lieuwe suggestion
 // 		smoothGradients(newRawRGB, lastProcessedRGB, newProcessedRGB, output);
 // 		lastProcessedRGB = newProcessedRGB.clone();

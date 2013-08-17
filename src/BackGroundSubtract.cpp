@@ -20,7 +20,7 @@ namespace Gardeners {
 		}
 	}
 	
-	void BackGroundSubtract::operator()(/*Mat & input, */Mat & output){
+	void BackGroundSubtract::operator()(Mat & input, Mat & output){
 		Mat d1(frames[0].size(), frames[0].type());
 		Mat d2(frames[0].size(), frames[0].type());
 		absdiff(frames[2], frames[1], d1);
@@ -32,7 +32,7 @@ namespace Gardeners {
 		
 		frames[0] = frames[1].clone();
 		frames[1] = frames[2].clone();
-		videoStream >> frames[2];
+		frames[2] = input.clone();
 		
 		return;
 		

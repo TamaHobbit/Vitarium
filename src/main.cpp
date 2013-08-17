@@ -40,16 +40,6 @@ int main ( int argc, const char* argv[] ){
 	
 	BackGroundSubtract filter(capture, window_title);
 	
-	//Lieuwe's suggestion using gradients
-// 	Size camSize(capture.get(CV_CAP_PROP_FRAME_WIDTH), capture.get(CV_CAP_PROP_FRAME_HEIGHT));
-// 	Mat lastProcessedRGB(camSize, CV_8UC3), \
-// 			newRawRGB(camSize, CV_8UC3), \
-// 			newProcessedRGB(camSize, CV_8UC3);
-// 	capture >> newRawRGB;
-// 	newProcessedRGB = newRawRGB.clone();
-// 	lastProcessedRGB = newRawRGB.clone();
-// 	Mat output(newRawRGB.size(), newRawRGB.type());
-	
 	Mat newRawRGB(referenceImage.size(), referenceImage.type());
 	Mat output(referenceImage.size(), referenceImage.type());
  	const Mat * displayImage = &output;
@@ -60,9 +50,6 @@ int main ( int argc, const char* argv[] ){
 		capture >> newRawRGB; // get a new frame from camera
 		
 		filter(newRawRGB, output);
-		//Lieuwe suggestion
-// 		smoothGradients(newRawRGB, lastProcessedRGB, newProcessedRGB, output);
-// 		lastProcessedRGB = newProcessedRGB.clone();
 		
 		imshow(window_title, *displayImage);
 

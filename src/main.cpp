@@ -44,6 +44,7 @@ int main ( int argc, const char* argv[] ){
 	Mat output(referenceImage.size(), referenceImage.type());
  	const Mat * displayImage = &output;
 	
+	//                      000001000000001000
 	CellularAutomaton game("000001100000001000");
 	game.setRand( referenceImage.cols, referenceImage.rows, 0 );
 	Mat prevPlusNew;
@@ -53,7 +54,7 @@ int main ( int argc, const char* argv[] ){
 		
 		filter(newRawRGB, output);
 		cvtColor( output, output, CV_BGR2GRAY );
-		
+		threshold( output, output, 30, 255, CV_THRESH_BINARY);
 		
 		bitwise_or(output, game.m_data, game.m_data);
 		game.timestep();
@@ -67,6 +68,7 @@ int main ( int argc, const char* argv[] ){
 				break;
 			} else if(keyPressed == 32){ //spacebar
 				filter.updateReference();
+				game.setRand( referenceImage.cols, referenceImage.rows, 0 );
 			} else if(keyPressed == 115){ // 's'
 				saveImage(*displayImage);
 			} else if(keyPressed == 'q'){

@@ -23,7 +23,7 @@ const char * window_title = "Gardeners";
 //check the camera, then calibrate the reference image (upon "spacebar" press)
 int main ( int argc, const char* argv[] ){
 	VideoCapture capture(0);
-	//capture.open(1);
+	//cvCaptureFromCAM(int);
 	if(!capture.isOpened()){  // check if we succeeded
 		cerr << "Could not capture from camera." << endl;
 		return -1;

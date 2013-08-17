@@ -11,6 +11,8 @@ namespace Gardeners {
 		//1, 1, 5, 2 thresh 60
 		erode_size = 1; erode_passes = 1;
 		dilate_size = 5; dilate_passes = 2;
+		
+		
 	}
 	
 	void BackGroundSubtract::updateReference(Mat reference){
@@ -19,12 +21,19 @@ namespace Gardeners {
 	}
 	
 	void BackGroundSubtract::operator()(Mat & input, Mat & output){
+		
+		absdiff(next_frame, current_frame, d1);
+		absdiff(current_frame, prev_frame, d2);
+		bitwise_xor(d1, d2, output);
+		threshold(output, output, 140, 255, CV_THRESH_BINARY);
+		
+		
 		//from http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/sobel_derivatives/sobel_derivatives.html
-		cvtColor( input, output, CV_RGB2GRAY );
+		cvtColor( input, output, CV_BGR2GRAY );
 		GaussianBlur( output, output, Size(5,5), 0, 0, BORDER_DEFAULT );
 		
 		int scale = 1;
-		int delta = 0;
+		int delta = 100;
 		int ddepth = CV_16S;
 		
 		/// Generate grad_x and grad_y
@@ -32,13 +41,13 @@ namespace Gardeners {
 		Mat abs_grad_x, abs_grad_y;
 
 		/// Gradient X
-		Scharr( output, grad_x, ddepth, 1, 0, scale, delta, BORDER_DEFAULT );
-		//Sobel( output, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT );
+		//Scharr( output, grad_x, ddepth, 1, 0, scale, delta, BORDER_DEFAULT );
+		Sobel( output, grad_x, ddepth, 1, 0, 3, scale, delta, BORDER_DEFAULT );
 		convertScaleAbs( grad_x, abs_grad_x );
 
 		/// Gradient Y
-		Scharr( output, grad_y, ddepth, 0, 1, scale, delta, BORDER_DEFAULT );
-		//Sobel( output, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT );
+		//Scharr( output, grad_y, ddepth, 0, 1, scale, delta, BORDER_DEFAULT );
+		Sobel( output, grad_y, ddepth, 0, 1, 3, scale, delta, BORDER_DEFAULT );
 		convertScaleAbs( grad_y, abs_grad_y );
 
 		/// Total Gradient (approximate)

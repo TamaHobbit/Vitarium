@@ -1,0 +1,19 @@
+Source tutorials and references:
+
+OpenCV cheatsheet:
+http://docs.opencv.org/trunk/opencv_cheatsheet.pdf
+
+Image i/o:
+http://docs.opencv.org/doc/tutorials/introduction/load_save_image/load_save_image.html
+
+Image storage basics:
+http://docs.opencv.org/doc/tutorials/core/mat_the_basic_image_container/mat_the_basic_image_container.html
+
+HSV format in OpenCV:
+http://www.shervinemami.info/colorConversion.html
+
+Morphological transformations:
+http://docs.opencv.org/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html
+
+Structural Analysis:
+http://docs.opencv.org/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=convexhull#convexhull

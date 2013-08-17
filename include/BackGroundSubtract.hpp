@@ -10,13 +10,14 @@ namespace Gardeners {
 	
 	class BackGroundSubtract {
 	public:
+		const static int FRAMECOUNT = 3;
 		
-		BackGroundSubtract(Mat reference);
+		BackGroundSubtract(VideoCapture cap, const char * title);
 		
-		void updateReference(Mat reference);
+		void updateReference();
 		
 		void smoothGradients(Mat newRawRGB, Mat lastProcessedRGB, Mat newProcessedRGB);
-		void operator()(Mat & input, Mat & output);
+		void operator()(/*Mat & input, */Mat & output);
 		
 		template<class Func>
 		void channelWise(Mat & frame, Mat & output, Func f){
@@ -32,7 +33,10 @@ namespace Gardeners {
 		int dilate_size, dilate_passes;
 		int diff_threshold_value;
 	private:
-		Mat referenceImage;
+		const char * const window_title;
+		VideoCapture videoStream;
+		
+		Mat frames[FRAMECOUNT];
 		vector<Mat> reference_split;
 		
 		void diff_and_thresh_channels(Mat & frame, Mat & person_mask);

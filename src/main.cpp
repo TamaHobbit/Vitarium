@@ -29,15 +29,16 @@ int main ( int argc, const char* argv[] ){
 		return -1;
 	}
 	
-	Mat referenceImage;
 	namedWindow(window_title,1); //0 required for FULLSCREEN, 1 is normal (autosize)
 	//setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+	
+	Mat referenceImage;
 	do{
 		capture >> referenceImage;
 		imshow(window_title, referenceImage);
 	}while( waitKey(30) != 32 ); //spacebar
 	
-	BackGroundSubtract filter(referenceImage);
+	BackGroundSubtract filter(capture, window_title);
 	
 	//Lieuwe's suggestion using gradients
 // 	Size camSize(capture.get(CV_CAP_PROP_FRAME_WIDTH), capture.get(CV_CAP_PROP_FRAME_HEIGHT));
@@ -54,9 +55,9 @@ int main ( int argc, const char* argv[] ){
  	const Mat * displayImage = &output;
 	
 	while(true)	{
-		capture >> newRawRGB; // get a new frame from camera
+		//capture >> newRawRGB; // get a new frame from camera
 		
-		filter(newRawRGB, output);
+		filter(output);
 		//Lieuwe suggestion
 // 		smoothGradients(newRawRGB, lastProcessedRGB, newProcessedRGB, output);
 // 		lastProcessedRGB = newProcessedRGB.clone();
@@ -69,7 +70,7 @@ int main ( int argc, const char* argv[] ){
 			if(keyPressed == 27){ //escape
 				break;
 			} else if(keyPressed == 32){ //spacebar
-				filter.updateReference(newRawRGB);
+				filter.updateReference();
 			} else if(keyPressed == 115){ // 's'
 				saveImage(*displayImage);
 			} else if(keyPressed == 'q'){

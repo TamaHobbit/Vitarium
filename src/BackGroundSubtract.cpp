@@ -6,7 +6,7 @@ namespace Gardeners {
 		updateReference();
 		//lower = more crisp, higher = less noise. Anywhere between 40 and 70 is good
 		//this is the most efficient way of reducing distractions (noise outside person)
-		diff_threshold_value = 60;  
+		diff_threshold_value = 15;
 
 		//1, 1, 5, 2 thresh 60
 		erode_size = 1; erode_passes = 1;

@@ -29,8 +29,8 @@ int main ( int argc, const char* argv[] ){
 		return -1;
 	}
 	
-	namedWindow(window_title,1); //0 required for FULLSCREEN, 1 is normal (autosize)
-	//setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+	namedWindow(window_title,0); //0 required for FULLSCREEN, 1 is normal (autosize)
+	setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
 	
 	Mat referenceImage;
 	do{
@@ -54,7 +54,7 @@ int main ( int argc, const char* argv[] ){
 		
 		filter(newRawRGB, output);
 		cvtColor( output, output, CV_BGR2GRAY );
-		threshold( output, output, 30, 255, CV_THRESH_BINARY);
+		threshold( output, output, filter.diff_threshold_value, 255, CV_THRESH_BINARY);
 		
 		bitwise_or(output, game.m_data, game.m_data);
 		game.timestep();

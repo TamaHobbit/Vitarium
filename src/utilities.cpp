@@ -83,13 +83,4 @@ namespace Gardeners {
 		cvtColor(input, output, CV_BGR2GRAY);
 		threshold(output, output, 20, 255, THRESH_BINARY);
 	}
-	
-	void saveImage(const Mat & frame){
-		string imageName;
-		std::cin >> imageName;
-		imageName = string("../images/") + imageName + string(".jpg");
-		cout << "Writing frame to " + imageName << endl;
-		imwrite( imageName, frame );
-	}
-	
 }

@@ -7,10 +7,8 @@ using namespace cv;
 using std::chrono::high_resolution_clock;
 using std::chrono::microseconds;
 
-#include "values.hpp"
-#include "utilities.hpp"
-#include "BackGroundSubtract.hpp"
-using namespace Gardeners;
+#include "Gardeners.hpp"
+#include "CellularAutomaton.hpp"
 
 /* Making it run fast:
  * increasing the threshold removes distractions without slowing down at all
@@ -19,6 +17,8 @@ using namespace Gardeners;
  */
 
 const char * window_title = "Gardeners";
+
+void saveImage(const Mat & frame);
 
 //check the camera, then calibrate the reference image (upon "spacebar" press)
 int main ( int argc, const char* argv[] ){
@@ -29,8 +29,10 @@ int main ( int argc, const char* argv[] ){
 		return -1;
 	}
 	
-	namedWindow(window_title,0); //0 required for FULLSCREEN, 1 is normal (autosize)
-	setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+	namedWindow(window_title,1); //0 required for FULLSCREEN, 1 is normal (autosize)
+	//setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
+	
+	Gardeners artwork(capture, window_title);
 	
 	Mat referenceImage;
 	do{
@@ -38,28 +40,30 @@ int main ( int argc, const char* argv[] ){
 		imshow(window_title, referenceImage);
 	}while( waitKey(30) != 32 ); //spacebar
 	
-	BackGroundSubtract filter(capture, window_title);
+	const int NUMSEQ = 5; 
+	assert(NUMSEQ > 0 && NUMSEQ < 10);
+	Mat * imageSequence[NUMSEQ];
+	for(int i = 0; i < NUMSEQ-1; i++){
+		imageSequence[i] = new Mat(referenceImage.size(), referenceImage.type());
+	}
 	
-	Mat newRawRGB(referenceImage.size(), referenceImage.type());
-	Mat output(referenceImage.size(), referenceImage.type());
- 	const Mat * displayImage = &output;
-	
-	//                      000001000000001000
 	CellularAutomaton game("000001100000001000");
+	imageSequence[NUMSEQ-1] = &game.m_data;
 	game.setRand( referenceImage.cols, referenceImage.rows, 0 );
-	Mat prevPlusNew;
+	const Mat * displayImage = imageSequence[NUMSEQ-1];
 	
-	while(true)	{
-		capture >> newRawRGB; // get a new frame from camera
+	while(true){
+		capture >> *imageSequence[0]; // get a new frame from camera
 		
-		filter(newRawRGB, output);
-		cvtColor( output, output, CV_BGR2GRAY );
-		threshold( output, output, filter.diff_threshold_value, 255, CV_THRESH_BINARY);
+		artwork.getMovement( *imageSequence[0], *imageSequence[1] );
+		artwork.revolve( *imageSequence[0] );
+		cvtColor( *imageSequence[1], *imageSequence[2], CV_BGR2GRAY );
+		threshold( *imageSequence[2], *imageSequence[3], artwork.movement_threshold, 255, CV_THRESH_BINARY);
 		
-		bitwise_or(output, game.m_data, game.m_data);
+		bitwise_or( *imageSequence[3], *imageSequence[4], *imageSequence[4]);
 		game.timestep();
 		
-		imshow(window_title, game.m_data);
+		imshow(window_title, *displayImage);
 
 		int keyPressed = waitKey(30);
 		//high_resolution_clock::time_point previousTime = high_resolution_clock::now();
@@ -67,17 +71,25 @@ int main ( int argc, const char* argv[] ){
 			if(keyPressed == 27){ //escape
 				break;
 			} else if(keyPressed == 32){ //spacebar
-				filter.updateReference();
+				artwork.updateReference();
 				game.setRand( referenceImage.cols, referenceImage.rows, 0 );
 			} else if(keyPressed == 115){ // 's'
 				saveImage(*displayImage);
 			} else if(keyPressed == 'q'){
-				displayImage = &newRawRGB;
+				displayImage = imageSequence[0];
 				cout << "Viewing input" << endl;
 			} else if(keyPressed == 'w'){
-				displayImage = &output;
+				displayImage = imageSequence[NUMSEQ-1];
 				cout << "Viewing output" << endl;
-			} else if(keyPressed == 'e'){
+			} else if(keyPressed >= '1' && keyPressed <= '9'){
+				const int index = keyPressed-'1';
+				if(index >= NUMSEQ){
+					cout << "Only the sequence from '1' to '" << (char)(NUMSEQ-1+'1') << "' is in use." << endl;
+					continue;
+				}
+				displayImage = imageSequence[keyPressed-'1'];
+				cout << "Viewing image " << (char)keyPressed << endl;
+			}/* else if(keyPressed == 'e'){
 				filter.erode_size++;
 				cout << "Erode size: " << filter.erode_size << endl;
 			} else if(keyPressed == 'r' && filter.erode_size > 0){
@@ -107,7 +119,7 @@ int main ( int argc, const char* argv[] ){
 			} else if(keyPressed == 46){// '>'
 				filter.diff_threshold_value+=5;
 				cout << "Threshold: " << filter.diff_threshold_value << endl;
-			} else {
+			} */else {
 				cout << "No key binding for: " << keyPressed << endl;
 			}
 		}
@@ -121,10 +133,22 @@ int main ( int argc, const char* argv[] ){
 		
 	}
 	
-	cout << "Erode size: " << filter.erode_size << endl
-			<< "Erode passes: " << filter.erode_passes << endl
-			<< "Dilate size: " << filter.dilate_size << endl
-			<< "Dilate repeat: " << filter.dilate_passes << endl;
+// 	cout << "Erode size: " << filter.erode_size << endl
+// 			<< "Erode passes: " << filter.erode_passes << endl
+// 			<< "Dilate size: " << filter.dilate_size << endl
+// 			<< "Dilate repeat: " << filter.dilate_passes << endl;
 	
+			
+	for(int i = 0; i < NUMSEQ-1; i++){
+		delete imageSequence[i];
+	}
  	return 0;
+}
+
+void saveImage(const Mat & frame){
+	string imageName;
+	std::cin >> imageName;
+	imageName = string("../images/") + imageName + string(".jpg");
+	cout << "Writing frame to " + imageName << endl;
+	imwrite( imageName, frame );
 }

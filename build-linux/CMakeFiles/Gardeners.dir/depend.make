@@ -48,6 +48,37 @@ CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: /usr/local/include/opencv2
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
 
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: ../include/Gardeners.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: ../src/Gardeners.cpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv/highgui.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/calib3d/calib3d.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/contrib/contrib.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/contrib/openfabmap.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/contrib/retina.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/core.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/core_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/mat.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/operations.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/types_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/core/version.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/features2d/features2d.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/flann/config.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/flann/defines.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/flann/miniflann.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/highgui/highgui.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/highgui/highgui_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/imgproc/imgproc.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/imgproc/imgproc_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/imgproc/types_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/ml/ml.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/objdetect/objdetect.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/opencv.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/photo/photo.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/photo/photo_c.h
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/video/background_segm.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: /usr/local/include/opencv2/video/video.hpp
+
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: ../include/compare.hpp
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: ../src/compare.cpp
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: /usr/local/include/opencv2/calib3d/calib3d.hpp
@@ -78,10 +109,8 @@ CMakeFiles/Gardeners.dir/src/compare.cpp.o: /usr/local/include/opencv2/video/bac
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: /usr/local/include/opencv2/video/video.hpp
 
-CMakeFiles/Gardeners.dir/src/main.cpp.o: ../include/BackGroundSubtract.hpp
 CMakeFiles/Gardeners.dir/src/main.cpp.o: ../include/CellularAutomaton.hpp
-CMakeFiles/Gardeners.dir/src/main.cpp.o: ../include/utilities.hpp
-CMakeFiles/Gardeners.dir/src/main.cpp.o: ../include/values.hpp
+CMakeFiles/Gardeners.dir/src/main.cpp.o: ../include/Gardeners.hpp
 CMakeFiles/Gardeners.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/Gardeners.dir/src/main.cpp.o: /usr/local/include/opencv/highgui.h
 CMakeFiles/Gardeners.dir/src/main.cpp.o: /usr/local/include/opencv2/calib3d/calib3d.hpp

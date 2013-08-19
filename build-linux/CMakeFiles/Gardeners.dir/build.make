@@ -98,9 +98,32 @@ CMakeFiles/Gardeners.dir/src/compare.cpp.o.provides: CMakeFiles/Gardeners.dir/sr
 
 CMakeFiles/Gardeners.dir/src/compare.cpp.o.provides.build: CMakeFiles/Gardeners.dir/src/compare.cpp.o
 
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: CMakeFiles/Gardeners.dir/flags.make
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: ../src/Gardeners.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o -c /media/code/Cpp/Gardeners2/src/Gardeners.cpp
+
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/Gardeners.cpp > CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i
+
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/Gardeners.cpp -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s
+
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires:
+.PHONY : CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires
+
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.provides: CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.provides.build
+.PHONY : CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.provides
+
+CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.provides.build: CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o
+
 CMakeFiles/Gardeners.dir/src/main.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/main.cpp.o -c /media/code/Cpp/Gardeners2/src/main.cpp
 
@@ -123,7 +146,7 @@ CMakeFiles/Gardeners.dir/src/main.cpp.o.provides.build: CMakeFiles/Gardeners.dir
 
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o: ../src/utilities.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/utilities.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/utilities.cpp.o -c /media/code/Cpp/Gardeners2/src/utilities.cpp
 
@@ -146,7 +169,7 @@ CMakeFiles/Gardeners.dir/src/utilities.cpp.o.provides.build: CMakeFiles/Gardener
 
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: ../src/CellularAutomaton.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o -c /media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
 
@@ -171,6 +194,7 @@ CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o.provides.build: CMakeFiles/
 Gardeners_OBJECTS = \
 "CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o" \
 "CMakeFiles/Gardeners.dir/src/compare.cpp.o" \
+"CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o" \
 "CMakeFiles/Gardeners.dir/src/main.cpp.o" \
 "CMakeFiles/Gardeners.dir/src/utilities.cpp.o" \
 "CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o"
@@ -180,6 +204,7 @@ Gardeners_EXTERNAL_OBJECTS =
 
 Gardeners: CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o
 Gardeners: CMakeFiles/Gardeners.dir/src/compare.cpp.o
+Gardeners: CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o
 Gardeners: CMakeFiles/Gardeners.dir/src/main.cpp.o
 Gardeners: CMakeFiles/Gardeners.dir/src/utilities.cpp.o
 Gardeners: CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o
@@ -212,6 +237,7 @@ CMakeFiles/Gardeners.dir/build: Gardeners
 
 CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o.requires
 CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/compare.cpp.o.requires
+CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires
 CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/main.cpp.o.requires
 CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/utilities.cpp.o.requires
 CMakeFiles/Gardeners.dir/requires: CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o.requires

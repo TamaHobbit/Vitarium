@@ -47,6 +47,13 @@ int main ( int argc, const char* argv[] ){
 		imageSequence[i] = new Mat(referenceImage.size(), referenceImage.type());
 	}
 	
+	//Life: 000001100000001000
+	//Seeds: 000000000000000100
+	//Whiteweb: 100001100111000000
+	//Fader: 100100000111000000
+	//Anthairfade: 000111000001110000
+	//Anthillspread: 000111000001111000
+	
 	CellularAutomaton game("000001100000001000");
 	imageSequence[NUMSEQ-1] = &game.m_data;
 	game.setRand( referenceImage.cols, referenceImage.rows, 0 );

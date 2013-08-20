@@ -6,18 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/BackGroundSubtract.hpp
-opencv2/opencv.hpp
--
-opencv/highgui.h
--
-values.hpp
-../include/values.hpp
-utilities.hpp
-../include/utilities.hpp
-CellularAutomaton.hpp
-../include/CellularAutomaton.hpp
-
 ../include/CellularAutomaton.hpp
 iostream
 -
@@ -34,30 +22,6 @@ opencv2/opencv.hpp
 opencv/highgui.h
 -
 
-../include/utilities.hpp
-chrono
--
-thread
--
-iostream
--
-opencv2/opencv.hpp
--
-
-../include/values.hpp
-
-/media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
-BackGroundSubtract.hpp
-/media/code/Cpp/Gardeners2/src/BackGroundSubtract.hpp
-
-/media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
-CellularAutomaton.hpp
-/media/code/Cpp/Gardeners2/src/CellularAutomaton.hpp
-
-/media/code/Cpp/Gardeners2/src/Gardeners.cpp
-Gardeners.hpp
-/media/code/Cpp/Gardeners2/src/Gardeners.hpp
-
 /media/code/Cpp/Gardeners2/src/main.cpp
 opencv2/opencv.hpp
 -
@@ -71,10 +35,6 @@ Gardeners.hpp
 /media/code/Cpp/Gardeners2/src/Gardeners.hpp
 CellularAutomaton.hpp
 /media/code/Cpp/Gardeners2/src/CellularAutomaton.hpp
-
-/media/code/Cpp/Gardeners2/src/utilities.cpp
-utilities.hpp
-/media/code/Cpp/Gardeners2/src/utilities.hpp
 
 /usr/local/include/opencv/highgui.h
 opencv2/core/core_c.h

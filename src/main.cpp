@@ -53,6 +53,7 @@ int main ( int argc, const char* argv[] ){
 	//Fader: 100100000111000000
 	//Anthairfade: 000111000001110000
 	//Anthillspread: 000111000001111000
+	//Spaceships: 001000100110000100
 	
 	CellularAutomaton game("000001100000001000");
 	imageSequence[NUMSEQ-1] = &game.m_data;
@@ -62,9 +63,10 @@ int main ( int argc, const char* argv[] ){
 	while(true){
 		capture >> *imageSequence[0]; // get a new frame from camera
 		
-		artwork.getMovement( *imageSequence[0], *imageSequence[1] );
-		artwork.revolve( *imageSequence[0] );
-		cvtColor( *imageSequence[1], *imageSequence[2], CV_BGR2GRAY );
+		cvtColor( *imageSequence[0], *imageSequence[1], CV_BGR2GRAY );
+		artwork.getMovement( *imageSequence[1], *imageSequence[2] );
+		artwork.revolve( *imageSequence[1] ); //store new frame and shift others
+		//cvtColor( *imageSequence[1], *imageSequence[2], CV_BGR2GRAY );
 		threshold( *imageSequence[2], *imageSequence[3], artwork.movement_threshold, 255, CV_THRESH_BINARY);
 		
 		bitwise_or( *imageSequence[3], *imageSequence[4], *imageSequence[4]);

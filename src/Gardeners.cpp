@@ -8,6 +8,7 @@ Gardeners::Gardeners(VideoCapture cap, const char * title) : window_title(title)
 void Gardeners::updateReference(){
 	for(int i = 0; i < FRAMECOUNT; i++){
 		videoStream >> frames[i];
+		cvtColor( frames[i], frames[i], CV_BGR2GRAY );
 		waitKey(30);
 	}
 }

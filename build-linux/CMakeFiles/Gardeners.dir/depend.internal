@@ -6,7 +6,7 @@ CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o
  ../include/CellularAutomaton.hpp
  ../include/utilities.hpp
  ../include/values.hpp
- /media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
+ /media/tama/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
  /usr/local/include/opencv/highgui.h
  /usr/local/include/opencv2/calib3d/calib3d.hpp
  /usr/local/include/opencv2/contrib/contrib.hpp
@@ -37,7 +37,7 @@ CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o
  /usr/local/include/opencv2/video/video.hpp
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o
  ../include/CellularAutomaton.hpp
- /media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
+ /media/tama/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
  /usr/local/include/opencv2/core/core.hpp
  /usr/local/include/opencv2/core/core_c.h
  /usr/local/include/opencv2/core/mat.hpp
@@ -50,7 +50,7 @@ CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o
  /usr/local/include/opencv2/imgproc/types_c.h
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o
  ../include/Gardeners.hpp
- /media/code/Cpp/Gardeners2/src/Gardeners.cpp
+ /media/tama/code/Cpp/Gardeners2/src/Gardeners.cpp
  /usr/local/include/opencv/highgui.h
  /usr/local/include/opencv2/calib3d/calib3d.hpp
  /usr/local/include/opencv2/contrib/contrib.hpp
@@ -81,7 +81,7 @@ CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o
  /usr/local/include/opencv2/video/video.hpp
 CMakeFiles/Gardeners.dir/src/compare.cpp.o
  ../include/compare.hpp
- /media/code/Cpp/Gardeners2/src/compare.cpp
+ /media/tama/code/Cpp/Gardeners2/src/compare.cpp
  /usr/local/include/opencv2/calib3d/calib3d.hpp
  /usr/local/include/opencv2/contrib/contrib.hpp
  /usr/local/include/opencv2/contrib/openfabmap.hpp
@@ -112,7 +112,7 @@ CMakeFiles/Gardeners.dir/src/compare.cpp.o
 CMakeFiles/Gardeners.dir/src/main.cpp.o
  ../include/CellularAutomaton.hpp
  ../include/Gardeners.hpp
- /media/code/Cpp/Gardeners2/src/main.cpp
+ /media/tama/code/Cpp/Gardeners2/src/main.cpp
  /usr/local/include/opencv/highgui.h
  /usr/local/include/opencv2/calib3d/calib3d.hpp
  /usr/local/include/opencv2/contrib/contrib.hpp
@@ -143,7 +143,7 @@ CMakeFiles/Gardeners.dir/src/main.cpp.o
  /usr/local/include/opencv2/video/video.hpp
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o
  ../include/utilities.hpp
- /media/code/Cpp/Gardeners2/src/utilities.cpp
+ /media/tama/code/Cpp/Gardeners2/src/utilities.cpp
  /usr/local/include/opencv2/calib3d/calib3d.hpp
  /usr/local/include/opencv2/contrib/contrib.hpp
  /usr/local/include/opencv2/contrib/openfabmap.hpp

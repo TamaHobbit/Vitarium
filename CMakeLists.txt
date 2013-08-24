@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Name your program!
-set (App_Name "Gardeners")
+set (App_Name "Vitarium")
 if (App_Name STREQUAL "")
   message (FATAL_ERROR "You must set the App_Name variable!")
 endif ()

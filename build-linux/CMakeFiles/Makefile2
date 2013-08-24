@@ -50,44 +50,44 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/code/Cpp/Gardeners2
+CMAKE_SOURCE_DIR = /media/code/Cpp/OpenCV/Vitarium
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/code/Cpp/Gardeners2/build-linux
+CMAKE_BINARY_DIR = /media/code/Cpp/OpenCV/Vitarium/build-linux
 
 #=============================================================================
-# Target rules for target CMakeFiles/Gardeners.dir
+# Target rules for target CMakeFiles/Vitarium.dir
 
 # All Build rule for target.
-CMakeFiles/Gardeners.dir/all:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/depend
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles  1 2 3 4 5 6
-	@echo "Built target Gardeners"
-.PHONY : CMakeFiles/Gardeners.dir/all
+CMakeFiles/Vitarium.dir/all:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/depend
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles  1 2 3 4 5 6
+	@echo "Built target Vitarium"
+.PHONY : CMakeFiles/Vitarium.dir/all
 
 # Include target in all.
-all: CMakeFiles/Gardeners.dir/all
+all: CMakeFiles/Vitarium.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Gardeners.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/Gardeners2/build-linux/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Gardeners.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/Gardeners2/build-linux/CMakeFiles 0
-.PHONY : CMakeFiles/Gardeners.dir/rule
+CMakeFiles/Vitarium.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Vitarium.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles 0
+.PHONY : CMakeFiles/Vitarium.dir/rule
 
 # Convenience name for target.
-Gardeners: CMakeFiles/Gardeners.dir/rule
-.PHONY : Gardeners
+Vitarium: CMakeFiles/Vitarium.dir/rule
+.PHONY : Vitarium
 
 # clean rule for target.
-CMakeFiles/Gardeners.dir/clean:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/clean
-.PHONY : CMakeFiles/Gardeners.dir/clean
+CMakeFiles/Vitarium.dir/clean:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/clean
+.PHONY : CMakeFiles/Vitarium.dir/clean
 
 # clean rule for target.
-clean: CMakeFiles/Gardeners.dir/clean
+clean: CMakeFiles/Vitarium.dir/clean
 .PHONY : clean
 
 #=============================================================================

@@ -7,7 +7,7 @@ using namespace cv;
 using std::chrono::high_resolution_clock;
 using std::chrono::microseconds;
 
-#include "Gardeners.hpp"
+#include "Vitarium.hpp"
 #include "CellularAutomaton.hpp"
 
 /* Making it run fast:
@@ -16,7 +16,7 @@ using std::chrono::microseconds;
  * the total amount of passes should be no more than 5
  */
 
-const char * window_title = "Gardeners";
+const char * window_title = "Vitarium";
 
 void saveImage(const Mat & frame);
 
@@ -32,7 +32,7 @@ int main ( int argc, const char* argv[] ){
 	namedWindow(window_title,1); //0 required for FULLSCREEN, 1 is normal (autosize)
 	//setWindowProperty(window_title, CV_WND_PROP_FULLSCREEN, CV_WINDOW_FULLSCREEN);
 	
-	Gardeners artwork(capture, window_title);
+	Vitarium artwork(capture, window_title);
 	
 	Mat referenceImage;
 	do{
@@ -40,7 +40,7 @@ int main ( int argc, const char* argv[] ){
 		imshow(window_title, referenceImage);
 	}while( waitKey(30) != 32 ); //spacebar
 	
-	const int NUMSEQ = 5; 
+	const int NUMSEQ = 6; 
 	assert(NUMSEQ > 0 && NUMSEQ < 10);
 	Mat * imageSequence[NUMSEQ];
 	for(int i = 0; i < NUMSEQ-1; i++){
@@ -60,6 +60,7 @@ int main ( int argc, const char* argv[] ){
 	game.setRand( referenceImage.cols, referenceImage.rows, 0 );
 	const Mat * displayImage = imageSequence[NUMSEQ-1];
 	
+	int option_e = 0, option_d = 30, option_t, option_g;
 	while(true){
 		capture >> *imageSequence[0]; // get a new frame from camera
 		
@@ -69,7 +70,8 @@ int main ( int argc, const char* argv[] ){
 		//cvtColor( *imageSequence[1], *imageSequence[2], CV_BGR2GRAY );
 		threshold( *imageSequence[2], *imageSequence[3], artwork.movement_threshold, 255, CV_THRESH_BINARY);
 		
-		bitwise_or( *imageSequence[3], *imageSequence[4], *imageSequence[4]);
+		Canny(*imageSequence[1], *imageSequence[4], option_e, option_d, 3); //TODO what flag is 3?
+		bitwise_or( *imageSequence[3], *imageSequence[5], *imageSequence[5]);
 		game.timestep();
 		
 		imshow(window_title, *displayImage);
@@ -98,37 +100,31 @@ int main ( int argc, const char* argv[] ){
 				}
 				displayImage = imageSequence[keyPressed-'1'];
 				cout << "Viewing image " << (char)keyPressed << endl;
-			}/* else if(keyPressed == 'e'){
-				filter.erode_size++;
-				cout << "Erode size: " << filter.erode_size << endl;
-			} else if(keyPressed == 'r' && filter.erode_size > 0){
-				filter.erode_size--;
-				cout << "Erode size: " << filter.erode_size << endl;
+			} else if(keyPressed == 'e'){
+				option_e++;
+				cout << "Option e: " << option_e << endl;
+			} else if(keyPressed == 'r'){
+				option_e--;
+				cout << "Option e: " << option_e << endl;
 			} else if(keyPressed == 't'){
-				filter.erode_passes++;
-				cout << "Erode passes: " << filter.erode_passes << endl;
+				cout << "Option t: " << ++option_t << endl;
 			} else if(keyPressed == 'y'){
-				filter.erode_passes--;
-				cout << "Erode passes: " << filter.erode_passes << endl;
+				cout << "Option t: " << --option_t << endl;
 			} else if(keyPressed == 'd'){
-				filter.dilate_size++;
-				cout << "Dilate size: " << filter.dilate_size << endl;
-			} else if(keyPressed == 'f' && filter.dilate_size > 0){
-				filter.dilate_size--;
-				cout << "Dilate size: " << filter.dilate_size << endl;
+				cout << "Option d: " << ++option_d << endl;
+			} else if(keyPressed == 'f'){
+				cout << "Option d: " << --option_d << endl;
 			} else if(keyPressed == 'g'){
-				filter.dilate_passes++;
-				cout << "Dilate passes: " << filter.dilate_passes << endl;
+				cout << "Option g: " << ++option_g << endl;
 			} else if(keyPressed == 'h'){
-				filter.dilate_passes--;
-				cout << "Dilate passes: " << filter.dilate_passes << endl;
+				cout << "Option g: " << --option_g << endl;
 			} else if(keyPressed == 44){// '<'
-				filter.diff_threshold_value-=5;
-				cout << "Threshold: " << filter.diff_threshold_value << endl;
+				 artwork.movement_threshold-=5;
+				cout << "Threshold: " << artwork.movement_threshold << endl;
 			} else if(keyPressed == 46){// '>'
-				filter.diff_threshold_value+=5;
-				cout << "Threshold: " << filter.diff_threshold_value << endl;
-			} */else {
+				 artwork.movement_threshold+=5;
+				cout << "Threshold: " << artwork.movement_threshold << endl;
+			} else {
 				cout << "No key binding for: " << keyPressed << endl;
 			}
 		}

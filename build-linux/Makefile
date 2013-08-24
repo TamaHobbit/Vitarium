@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/code/Cpp/Gardeners2
+CMAKE_SOURCE_DIR = /media/code/Cpp/OpenCV/Vitarium
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/code/Cpp/Gardeners2/build-linux
+CMAKE_BINARY_DIR = /media/code/Cpp/OpenCV/Vitarium/build-linux
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/Gardeners2/build-linux/CMakeFiles /media/code/Cpp/Gardeners2/build-linux/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/Gardeners2/build-linux/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,24 +102,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Gardeners
+# Target rules for targets named Vitarium
 
 # Build rule for target.
-Gardeners: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Gardeners
-.PHONY : Gardeners
+Vitarium: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Vitarium
+.PHONY : Vitarium
 
 # fast build rule for target.
-Gardeners/fast:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/build
-.PHONY : Gardeners/fast
+Vitarium/fast:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/build
+.PHONY : Vitarium/fast
 
 src/BackGroundSubtract.o: src/BackGroundSubtract.cpp.o
 .PHONY : src/BackGroundSubtract.o
 
 # target to build an object file
 src/BackGroundSubtract.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/BackGroundSubtract.cpp.o
 .PHONY : src/BackGroundSubtract.cpp.o
 
 src/BackGroundSubtract.i: src/BackGroundSubtract.cpp.i
@@ -127,7 +127,7 @@ src/BackGroundSubtract.i: src/BackGroundSubtract.cpp.i
 
 # target to preprocess a source file
 src/BackGroundSubtract.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.i
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/BackGroundSubtract.cpp.i
 .PHONY : src/BackGroundSubtract.cpp.i
 
 src/BackGroundSubtract.s: src/BackGroundSubtract.cpp.s
@@ -135,7 +135,7 @@ src/BackGroundSubtract.s: src/BackGroundSubtract.cpp.s
 
 # target to generate assembly for a file
 src/BackGroundSubtract.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.s
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/BackGroundSubtract.cpp.s
 .PHONY : src/BackGroundSubtract.cpp.s
 
 src/CellularAutomaton.o: src/CellularAutomaton.cpp.o
@@ -143,7 +143,7 @@ src/CellularAutomaton.o: src/CellularAutomaton.cpp.o
 
 # target to build an object file
 src/CellularAutomaton.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/CellularAutomaton.cpp.o
 .PHONY : src/CellularAutomaton.cpp.o
 
 src/CellularAutomaton.i: src/CellularAutomaton.cpp.i
@@ -151,7 +151,7 @@ src/CellularAutomaton.i: src/CellularAutomaton.cpp.i
 
 # target to preprocess a source file
 src/CellularAutomaton.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.i
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/CellularAutomaton.cpp.i
 .PHONY : src/CellularAutomaton.cpp.i
 
 src/CellularAutomaton.s: src/CellularAutomaton.cpp.s
@@ -159,39 +159,39 @@ src/CellularAutomaton.s: src/CellularAutomaton.cpp.s
 
 # target to generate assembly for a file
 src/CellularAutomaton.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.s
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/CellularAutomaton.cpp.s
 .PHONY : src/CellularAutomaton.cpp.s
 
-src/Gardeners.o: src/Gardeners.cpp.o
-.PHONY : src/Gardeners.o
+src/Vitarium.o: src/Vitarium.cpp.o
+.PHONY : src/Vitarium.o
 
 # target to build an object file
-src/Gardeners.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o
-.PHONY : src/Gardeners.cpp.o
+src/Vitarium.cpp.o:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/Vitarium.cpp.o
+.PHONY : src/Vitarium.cpp.o
 
-src/Gardeners.i: src/Gardeners.cpp.i
-.PHONY : src/Gardeners.i
+src/Vitarium.i: src/Vitarium.cpp.i
+.PHONY : src/Vitarium.i
 
 # target to preprocess a source file
-src/Gardeners.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i
-.PHONY : src/Gardeners.cpp.i
+src/Vitarium.cpp.i:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/Vitarium.cpp.i
+.PHONY : src/Vitarium.cpp.i
 
-src/Gardeners.s: src/Gardeners.cpp.s
-.PHONY : src/Gardeners.s
+src/Vitarium.s: src/Vitarium.cpp.s
+.PHONY : src/Vitarium.s
 
 # target to generate assembly for a file
-src/Gardeners.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s
-.PHONY : src/Gardeners.cpp.s
+src/Vitarium.cpp.s:
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/Vitarium.cpp.s
+.PHONY : src/Vitarium.cpp.s
 
 src/compare.o: src/compare.cpp.o
 .PHONY : src/compare.o
 
 # target to build an object file
 src/compare.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/compare.cpp.o
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/compare.cpp.o
 .PHONY : src/compare.cpp.o
 
 src/compare.i: src/compare.cpp.i
@@ -199,7 +199,7 @@ src/compare.i: src/compare.cpp.i
 
 # target to preprocess a source file
 src/compare.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/compare.cpp.i
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/compare.cpp.i
 .PHONY : src/compare.cpp.i
 
 src/compare.s: src/compare.cpp.s
@@ -207,7 +207,7 @@ src/compare.s: src/compare.cpp.s
 
 # target to generate assembly for a file
 src/compare.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/compare.cpp.s
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/compare.cpp.s
 .PHONY : src/compare.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -215,7 +215,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -223,7 +223,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -231,7 +231,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/utilities.o: src/utilities.cpp.o
@@ -239,7 +239,7 @@ src/utilities.o: src/utilities.cpp.o
 
 # target to build an object file
 src/utilities.cpp.o:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/utilities.cpp.o
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/utilities.cpp.o
 .PHONY : src/utilities.cpp.o
 
 src/utilities.i: src/utilities.cpp.i
@@ -247,7 +247,7 @@ src/utilities.i: src/utilities.cpp.i
 
 # target to preprocess a source file
 src/utilities.cpp.i:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/utilities.cpp.i
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/utilities.cpp.i
 .PHONY : src/utilities.cpp.i
 
 src/utilities.s: src/utilities.cpp.s
@@ -255,7 +255,7 @@ src/utilities.s: src/utilities.cpp.s
 
 # target to generate assembly for a file
 src/utilities.cpp.s:
-	$(MAKE) -f CMakeFiles/Gardeners.dir/build.make CMakeFiles/Gardeners.dir/src/utilities.cpp.s
+	$(MAKE) -f CMakeFiles/Vitarium.dir/build.make CMakeFiles/Vitarium.dir/src/utilities.cpp.s
 .PHONY : src/utilities.cpp.s
 
 # Help Target
@@ -264,7 +264,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Gardeners"
+	@echo "... Vitarium"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src/BackGroundSubtract.o"
@@ -273,9 +273,9 @@ help:
 	@echo "... src/CellularAutomaton.o"
 	@echo "... src/CellularAutomaton.i"
 	@echo "... src/CellularAutomaton.s"
-	@echo "... src/Gardeners.o"
-	@echo "... src/Gardeners.i"
-	@echo "... src/Gardeners.s"
+	@echo "... src/Vitarium.o"
+	@echo "... src/Vitarium.i"
+	@echo "... src/Vitarium.s"
 	@echo "... src/compare.o"
 	@echo "... src/compare.i"
 	@echo "... src/compare.s"

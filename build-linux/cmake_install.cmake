@@ -1,4 +1,4 @@
-# Install script for directory: /media/code/Cpp/Gardeners2
+# Install script for directory: /media/code/Cpp/OpenCV/Vitarium
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +38,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/media/code/Cpp/Gardeners2/build-linux/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/media/code/Cpp/OpenCV/Vitarium/build-linux/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/media/code/Cpp/Gardeners2/build-linux/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/media/code/Cpp/OpenCV/Vitarium/build-linux/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

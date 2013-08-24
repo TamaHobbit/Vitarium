@@ -38,10 +38,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/code/Cpp/Gardeners2
+CMAKE_SOURCE_DIR = /media/tama/code/Cpp/Gardeners2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/code/Cpp/Gardeners2/build-linux
+CMAKE_BINARY_DIR = /media/tama/code/Cpp/Gardeners2/build-linux
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Gardeners.dir/depend.make
@@ -54,17 +54,17 @@ include CMakeFiles/Gardeners.dir/flags.make
 
 CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o: ../src/BackGroundSubtract.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o -c /media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp
 
 CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp > CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp > CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.i
 
 CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp -o CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/BackGroundSubtract.cpp -o CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.s
 
 CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o.requires
@@ -77,17 +77,17 @@ CMakeFiles/Gardeners.dir/src/BackGroundSubtract.cpp.o.provides.build: CMakeFiles
 
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/compare.cpp.o: ../src/compare.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/compare.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/compare.cpp.o -c /media/code/Cpp/Gardeners2/src/compare.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/compare.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/compare.cpp
 
 CMakeFiles/Gardeners.dir/src/compare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/compare.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/compare.cpp > CMakeFiles/Gardeners.dir/src/compare.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/compare.cpp > CMakeFiles/Gardeners.dir/src/compare.cpp.i
 
 CMakeFiles/Gardeners.dir/src/compare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/compare.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/compare.cpp -o CMakeFiles/Gardeners.dir/src/compare.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/compare.cpp -o CMakeFiles/Gardeners.dir/src/compare.cpp.s
 
 CMakeFiles/Gardeners.dir/src/compare.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/compare.cpp.o.requires
@@ -100,17 +100,17 @@ CMakeFiles/Gardeners.dir/src/compare.cpp.o.provides.build: CMakeFiles/Gardeners.
 
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o: ../src/Gardeners.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o -c /media/code/Cpp/Gardeners2/src/Gardeners.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/Gardeners.cpp
 
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/Gardeners.cpp > CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/Gardeners.cpp > CMakeFiles/Gardeners.dir/src/Gardeners.cpp.i
 
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/Gardeners.cpp -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/Gardeners.cpp -o CMakeFiles/Gardeners.dir/src/Gardeners.cpp.s
 
 CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.requires
@@ -123,17 +123,17 @@ CMakeFiles/Gardeners.dir/src/Gardeners.cpp.o.provides.build: CMakeFiles/Gardener
 
 CMakeFiles/Gardeners.dir/src/main.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/main.cpp.o: ../src/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/main.cpp.o -c /media/code/Cpp/Gardeners2/src/main.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/main.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/main.cpp
 
 CMakeFiles/Gardeners.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/main.cpp > CMakeFiles/Gardeners.dir/src/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/main.cpp > CMakeFiles/Gardeners.dir/src/main.cpp.i
 
 CMakeFiles/Gardeners.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/main.cpp -o CMakeFiles/Gardeners.dir/src/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/main.cpp -o CMakeFiles/Gardeners.dir/src/main.cpp.s
 
 CMakeFiles/Gardeners.dir/src/main.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/main.cpp.o.requires
@@ -146,17 +146,17 @@ CMakeFiles/Gardeners.dir/src/main.cpp.o.provides.build: CMakeFiles/Gardeners.dir
 
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o: ../src/utilities.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/utilities.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/utilities.cpp.o -c /media/code/Cpp/Gardeners2/src/utilities.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/utilities.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/utilities.cpp
 
 CMakeFiles/Gardeners.dir/src/utilities.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/utilities.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/utilities.cpp > CMakeFiles/Gardeners.dir/src/utilities.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/utilities.cpp > CMakeFiles/Gardeners.dir/src/utilities.cpp.i
 
 CMakeFiles/Gardeners.dir/src/utilities.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/utilities.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/utilities.cpp -o CMakeFiles/Gardeners.dir/src/utilities.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/utilities.cpp -o CMakeFiles/Gardeners.dir/src/utilities.cpp.s
 
 CMakeFiles/Gardeners.dir/src/utilities.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/utilities.cpp.o.requires
@@ -169,17 +169,17 @@ CMakeFiles/Gardeners.dir/src/utilities.cpp.o.provides.build: CMakeFiles/Gardener
 
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: CMakeFiles/Gardeners.dir/flags.make
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o: ../src/CellularAutomaton.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /media/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o -c /media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o -c /media/tama/code/Cpp/Gardeners2/src/CellularAutomaton.cpp
 
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp > CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /media/tama/code/Cpp/Gardeners2/src/CellularAutomaton.cpp > CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.i
 
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/code/Cpp/Gardeners2/src/CellularAutomaton.cpp -o CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /media/tama/code/Cpp/Gardeners2/src/CellularAutomaton.cpp -o CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.s
 
 CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o.requires:
 .PHONY : CMakeFiles/Gardeners.dir/src/CellularAutomaton.cpp.o.requires
@@ -248,6 +248,6 @@ CMakeFiles/Gardeners.dir/clean:
 .PHONY : CMakeFiles/Gardeners.dir/clean
 
 CMakeFiles/Gardeners.dir/depend:
-	cd /media/code/Cpp/Gardeners2/build-linux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/code/Cpp/Gardeners2 /media/code/Cpp/Gardeners2 /media/code/Cpp/Gardeners2/build-linux /media/code/Cpp/Gardeners2/build-linux /media/code/Cpp/Gardeners2/build-linux/CMakeFiles/Gardeners.dir/DependInfo.cmake --color=$(COLOR)
+	cd /media/tama/code/Cpp/Gardeners2/build-linux && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/tama/code/Cpp/Gardeners2 /media/tama/code/Cpp/Gardeners2 /media/tama/code/Cpp/Gardeners2/build-linux /media/tama/code/Cpp/Gardeners2/build-linux /media/tama/code/Cpp/Gardeners2/build-linux/CMakeFiles/Gardeners.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Gardeners.dir/depend
 

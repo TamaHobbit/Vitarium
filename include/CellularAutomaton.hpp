@@ -40,10 +40,8 @@ private:
 	
 	//0-8 stores the neighbourhood sum if the cell is dead, 9-17 if it is alive; 
 	//e.g. a sum of 12 means the centre is alive and 3 neighbours
-	const Mat kernel = (Mat_<double>(3,3) << 1, 1, 1, \
-																					1, 9, 1, \
-																					1, 1, 1);
-	const Point anchor = Point( -1, -1 );//always indicates center
-	const double delta = 0.0;//value to be added during filter2D
-	const int ddepth = -1;//indicating the second param of filter2D has the same depth as the first param
+	const Mat kernel;
+	const Point anchor;//always indicates center
+	const double delta;//value to be added during filter2D
+	const int ddepth;//indicating the second param of filter2D has the same depth as the first param
 };

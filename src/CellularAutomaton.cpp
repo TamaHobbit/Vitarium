@@ -1,9 +1,13 @@
 #include "CellularAutomaton.hpp"
 
-CellularAutomaton::CellularAutomaton(bitset<18> rule) : m_rule(rule){
+CellularAutomaton::CellularAutomaton(bitset<18> rule) : m_rule(rule), kernel((Mat_<double>(3,3) << 1, 1, 1, 1, 9, 1, 1, 1, 1)),
+							  anchor(Point( -1, -1 )), delta(0.0), ddepth(-1){
+	
+	
 }
 
-CellularAutomaton::CellularAutomaton(const char * rule){
+CellularAutomaton::CellularAutomaton(const char * rule) : kernel((Mat_<double>(3,3) << 1, 1, 1, 1, 9, 1, 1, 1, 1)),
+							  anchor(Point( -1, -1 )), delta(0.0), ddepth(-1){
 	unsigned long setbit = 1 << 17;
 	m_rule = 0;
 	for(int i = 0; i < 18; i++){

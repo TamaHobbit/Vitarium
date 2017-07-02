@@ -6,7 +6,7 @@ if (App_Name STREQUAL "")
   message (FATAL_ERROR "You must set the App_Name variable!")
 endif ()
 
-add_definitions(-std=c++11)
+add_definitions(-std=c++14)
 
 # Every project must have a name.
 project (${App_Name})

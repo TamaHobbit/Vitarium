@@ -1,4 +1,2 @@
-build-linux/
-build-linux/CMakeFiles/
-images/
-build-linux/CMakeFiles/Gardeners.dir/CXX.includecache
+/build-linux/
+/images/

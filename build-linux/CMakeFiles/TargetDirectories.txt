@@ -1,1 +1,0 @@
-/media/code/Cpp/OpenCV/Vitarium/build-linux/CMakeFiles/Vitarium.dir
